@@ -7,12 +7,14 @@ public class Monster {
         this.damage = damage;
     }
 
-    public void growl(){
-        System.out.println(name + " the Zombie growled");
+    public void growl() {
+        System.out.println(name + "growled");
     }
-    public void attack(){
-        System.out.println("Monster " + name + " the Zombie " +
+
+    public void attack() {
+        System.out.println("Monster " + name +
                 "attacked with damage " + damage);
+        growl();
     }
 
 }

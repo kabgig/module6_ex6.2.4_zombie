@@ -1,6 +1,7 @@
 public class Zombie extends Monster{
     private String name;
 
+
     String className = this.getClass().getName();
 
     public Zombie(String name) {
@@ -10,11 +11,7 @@ public class Zombie extends Monster{
     }
 
     public void growl(){
-        System.out.print("Raaaauuughhhh");
+        System.out.print("Raaaauuughhhh ");
+        super.growl();
     }
-
-    public void attack(){
-        System.out.println("Monster " + name + " the " + className + "attacked with damage 5");
-    }
-
 }

@@ -6,5 +6,7 @@ public class Main {
         Zombie zombie2 = new Zombie("Bob");
         zombie2.attack();
         zombie2.growl();
+        zombie2.growl(true);
+        zombie2.growl(false);
     }
 }

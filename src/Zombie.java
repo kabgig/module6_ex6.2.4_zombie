@@ -1,5 +1,7 @@
 public class Zombie extends Monster {
+
     public static String scream = "Raaaauuughhhh";
+
     public Zombie(String name) {
         super(name + " the Zombie", 5);
     }
@@ -10,11 +12,11 @@ public class Zombie extends Monster {
     }
 
     public void growl(boolean volume) {
-        if(volume == true)
+        if (volume)
             System.out.print(scream.toUpperCase());
-         else
+        else
             System.out.print(scream);
-            super.growl();
+        super.growl();
     }
 
     public void attack() {

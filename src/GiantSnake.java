@@ -1,27 +1,32 @@
 public class GiantSnake extends Monster {
 
-    public static String scream = "SSSSSS";
+    public static String scream = "Ssssss";
 
     public GiantSnake(String name) {
-        super(name + " the GiantSnake", 7);
+        super(name + " the GiantSnake", 5);
     }
 
-    public void growl() {
+    @Override
+    public void growl(){
         System.out.print(scream);
         super.growl();
     }
 
-    public void growl(boolean volume) {
-        if (volume)
+    public void growl(boolean loud){
+        if (!loud) {
+            growl();
+        }
+        else {
             System.out.print(scream.toUpperCase());
-        else
-            System.out.print(scream);
-        super.growl();
+            super.growl();
+        }
     }
 
-    public void attack() {
+    @Override
+    public void attack(){
+        growl(true);
         super.attack();
-        growl();
+        System.out.println("     ...and hid in the grass");
     }
 
 }

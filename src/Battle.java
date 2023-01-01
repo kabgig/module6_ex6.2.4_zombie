@@ -1,11 +1,14 @@
+import java.util.ArrayList;
+
 public class Battle {
-    Monster[] monsters = new Monster[5];
+    ArrayList<Monster> monsters = new ArrayList<>();
     int count = 0;
 
     void add(Monster monster) {
-        if (count < 5)
-            monsters[count++] = monster;
-        else
+        if (count < 5) {
+        monsters.add(monster);
+            count++;
+        } else
             System.out.println("No more monsters!");
     }
 

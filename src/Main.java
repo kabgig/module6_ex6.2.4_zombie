@@ -7,9 +7,6 @@ public class Main {
         battle.add(new GiantSnake("Kaa"));
         battle.add(new GiantSnake("Son of Kaa"));
 
-        battle.add(new Zombie("Noname"));
-        battle.add(new GiantSnake("Noname"));
-
         battle.start();
     }
 }

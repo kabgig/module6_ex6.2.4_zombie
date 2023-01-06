@@ -1,21 +1,18 @@
 public class Monster {
+    //Fix this class
     private String name;
-    private int damage;
+    private int force;
+    private int hp = 15;
+    private boolean destroyed = false;
 
-    public Monster(String name, int damage) {
+    public Monster(String name, int force) {
         this.name = name;
-        this.damage = damage;
+        this.force = force;
         System.out.println("Monster " + name + " was created");
     }
 
-    public void growl() {
-        System.out.println(" " + name + " growled");
-    }
-
-    public void attack() {
-        System.out.println("Monster " + name +
-                " attacked with damage " + damage);
-       // growl();
+    protected int getForce(){
+        return force;
     }
 
 }

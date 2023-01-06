@@ -1,4 +1,4 @@
-public class Monster {
+public abstract class Monster {
     //Fix this class
     private String name;
     private int force;
@@ -11,7 +11,18 @@ public class Monster {
         System.out.println("Monster " + name + " was created");
     }
 
-    protected int getForce(){
+    public abstract void attack(Monster monster);
+
+    protected boolean damage(int dhp) {
+        hp -= dhp;
+        return hp <= 0;
+    }
+
+    public boolean isDestroyed(){
+        return hp <= 0;
+    }
+
+    protected int getForce() {
         return force;
     }
 

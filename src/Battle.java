@@ -17,8 +17,11 @@ public class Battle {
     }
 
     void run() {
-        for (Monster m : monsters) {
-            m.attack();
+//        for (Monster m : monsters) {
+//            m.attack();
+//        }
+        for (int i = 0; i < monsters.size(); i++) {
+            monsters.get(i).attack(monsters.get(i+1));
         }
     }
 }
